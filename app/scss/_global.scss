@@ -25,4 +25,31 @@ h5,
 h6{
     margin: 0;
 }
-
+svg{
+    fill: #fff;
+}
+body{
+    color: #fff;
+    font-family: 'Futura PT Normal';
+    font-weight: 400;
+}
+.container{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.social{
+    display: inline-block;
+   li{
+       display: inline-block;
+       margin-right: 10px;
+   }
+   &__link{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    svg{
+        fill: #fff;
+    }
+   }
+}
