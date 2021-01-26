@@ -1,15 +1,19 @@
 
 $(function(){
 
-    $("#phone").mask("+38(099)999999 ");
-
     
+
+    $("#phone").mask("+38 (099) 999 99 99 ");
+
+
     $('#fullpage').fullpage({
         //options here
         autoScrolling:true,
         scrollHorizontally: true,
         sectionSelector: '.full-page',
-        scrollOverflow: true,
+        // scrollOverflow: true,
+        fixedElements: '#footer',
+        normalScrollElements: '#footer',
 	    menu: '#menu',
         anchors: ['top', 'info', 'portfolio', 'services',],
     });
@@ -26,7 +30,15 @@ $(function(){
      
     });
 
+    $('.news__slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow:' <button type = "button" class = "slider__btn-left slider__btn"></button>',
+        nextArrow:' <button type = "button" class = "slider__btn-right slider__btn"></button>'
+      });
    
+ 
 
 
 });
