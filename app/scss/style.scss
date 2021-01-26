@@ -277,3 +277,102 @@
     }
 }
 // end services 
+
+// start contacts
+.contacts{
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: calc(100vh - 100px);
+        max-width: 848px;
+    }
+    &__map{
+        margin-bottom: 58px;
+        img{
+            width: 100%;
+            height: 355px;
+        }
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__info{
+        max-width: 390px;
+    }
+    &__info-item{
+        width: 100%;
+        background-color: #131313;
+        margin-bottom: 31px;
+        height: 52px;
+       
+    }
+    &__info-text{
+        position: relative;
+        padding: 10px 20px 10px 80px;
+        display: block;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &--marker{
+            &::before{
+                background-image: url('../images/icons/marker.png');
+                width: 21px;
+                height: 30px;
+                left: 30px;
+            }
+        }
+        &--phone{
+            &::before{
+                background-image: url('../images/icons/phone.png');
+                width: 30px;
+                height: 30px;
+                left: 25px;
+            }
+        }
+        &--email{
+            &::before{
+                background-image: url('../images/icons/email.png');
+                width: 38px;
+                height: 30px;
+                left: 22px;
+            }
+        }
+    }
+    &__form{
+        max-width: 390px;
+        form{
+            width: 100%;
+            input{
+                width: 100%;
+                margin-bottom: 31px;
+                height: 52px;
+                background-color: #fff;
+                padding-left: 11px;
+                padding-right: 11px;
+                &::placeholder{
+                    color: #202020;
+                }
+            }
+            button{
+                text-align: center;
+                width: 100%;
+                height: 52px;
+                background-color: #55B055;
+                color: #FFFFFF;
+                font-family: 'Futura PT Bold';
+                font-weight: 700;
+            }
+        }
+    }
+}
+// end contacts

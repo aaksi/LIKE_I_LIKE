@@ -1,5 +1,9 @@
 
 $(function(){
+
+    $("#phone").mask("+38(099)999999 ");
+
+    
     $('#fullpage').fullpage({
         //options here
         autoScrolling:true,
@@ -23,6 +27,7 @@ $(function(){
     });
 
    
+
 
 });
 
