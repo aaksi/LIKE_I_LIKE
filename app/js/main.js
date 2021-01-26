@@ -11,7 +11,7 @@ $(function(){
         autoScrolling:true,
         scrollHorizontally: true,
         sectionSelector: '.full-page',
-        // scrollOverflow: true,
+        scrollOverflow: true,
         fixedElements: '#footer',
         normalScrollElements: '#footer',
 	    menu: '#menu',
@@ -30,6 +30,13 @@ $(function(){
      
     });
 
+    $('.project-descr__slider').slick({
+        infinite: true,
+        dots: true,
+        prevArrow:' <button type = "button" class = "slider__btn-left slider__btn"></button>',
+        nextArrow:' <button type = "button" class = "slider__btn-right slider__btn"></button>'
+    });
+
     $('.news__slider').slick({
         infinite: true,
         slidesToShow: 3,
@@ -38,7 +45,9 @@ $(function(){
         nextArrow:' <button type = "button" class = "slider__btn-right slider__btn"></button>'
       });
    
- 
+    
+
+    
 
 
 });
