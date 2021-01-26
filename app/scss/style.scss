@@ -95,6 +95,9 @@
         justify-content: center;
         min-height: calc(100vh - 100px);
     }
+    &__logo{
+        margin-bottom: 100px;
+    }
     &__descr{
         max-width: 585px;
         span{
@@ -104,3 +107,173 @@
     }
 }
 // end info
+
+
+// start portfolio 
+.portfolio{
+    &__wrapper{
+        text-align: center;
+        min-height: calc(100vh - 100px);
+    }
+    &__inner{
+        // display: grid;
+        // grid-template-rows: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-top: 50px;
+       display: flex;
+       justify-content: start;
+       flex-wrap: wrap;
+       margin-bottom: 50px;
+    }
+    &__item{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 364px;
+        height: 367px;
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            opacity: 0.4;
+            transition: all ease-in-out 0.3s;
+        }
+        &:hover{
+            // position: absolute;
+            .portfolio__item-name{
+                transform: translateY(0%);
+                // opacity: 1;
+                transition: all ease-in-out 0.3s;
+                
+            }
+            &::after{
+                opacity: 0.9;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+    }
+    &__item-name{
+        
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+        // transform: translateY(3000%);
+        &--top{
+            transform: translateY(-500%);
+            transition: all ease-in-out 0.3s;
+        }
+        &--bottom{
+            transform: translateY(500%);
+            transition: all ease-in-out 0.3s;
+        }
+        span{
+            display: block;
+            font-family: 'Futura PT Bold';
+            font-weight: 700;
+        }
+    }
+    &__btn{
+        margin-top: auto;
+        padding-bottom: 48px;
+        padding: 17px 77px;
+        background-color: #131313;
+        font-family: 'Futura PT Bold';
+        font-weight: 700;
+    }
+}
+// end portfolio 
+
+
+
+// start services 
+.services{
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: calc(100vh - 100px);
+    
+    }
+    &__accordion{
+        max-width: 847px;
+        width: 100%;
+    }
+    &__item{
+        overflow: hidden;
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+        &.services__item--active{
+            .services__item-list{
+                display: block;
+                // transform: translateY(0%);
+                transition: all .3s;
+            }
+            .services__item-title{
+                &::before{
+                    transform:   rotate(90deg) ;
+                    transition: all .3s;
+                    top: 30%;
+                }
+            }
+        }
+    }
+    
+    &__item-title{
+        font-family: 'Futura PT Bold';
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        border: 3px solid #131313;
+        padding: 20px 20px 20px 98px;
+        max-width: 847px;
+        position: relative;
+        cursor: pointer;
+        &::before{
+            content: '';
+            position: absolute; 
+            background-image: url('../images/icons/triangle.png');
+            width: 22px;
+            height: 29px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 35px;
+            transition: all .3s;
+        }
+    }
+    &__item-list{
+        background-color: #131313;
+        padding: 23px 81px 31px 71px;
+        margin-left: 110px;
+        display: none;
+        transition: all .3s;
+        // transform: translateY(-300%);
+
+    }
+    &__line{
+        border-bottom: 3px solid #202020;
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: 36px;
+        }
+    }
+    &__name{
+    }
+    &__price{
+        margin-left: auto;
+    }
+}
+// end services 
