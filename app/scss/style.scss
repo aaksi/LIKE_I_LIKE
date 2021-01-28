@@ -22,6 +22,13 @@
         display: inline-block;
         font-size: 24px;
         line-height: 31px;
+        a{
+            transition: all ease-out 0.3s;
+            &:hover{
+                transform: scale(1.2);
+                transition: all ease-out 0.3s;
+            }
+        }
     }
 }
 
@@ -165,8 +172,7 @@
             }
         }
     }
-    &__item-name{
-        
+    &__item-name{  
         position: relative;
         z-index: 2;
         opacity: 1;
@@ -430,6 +436,9 @@
         padding-top: 10px;
         padding-bottom: 11px;
     }
+    & + #menu{
+        right: 0;
+    }
 }
 .slider__btn{
     position: absolute;
@@ -477,8 +486,11 @@
     }
     &__logo{
         width: 157px;
-        height: 91px;
-        
+        display: inline-block;
+        img{
+            height: 91px;
+
+        }
     }
     &__links{
        
@@ -488,10 +500,29 @@
         }
     }
     &__contacts{
-
         li{
-
             margin-bottom: 16px;
+           
+        }
+        a{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 1px;
+                background-color: #fff;
+                left: 0;
+                bottom: 0;
+                transition: width ease-out 0.3s;
+            }
+            &:hover{
+                &::after{
+
+                    width: 100%;
+                    display: block;
+                }
+            }
         }
     }
     &__copy{
@@ -510,14 +541,13 @@
         }
     }
     .top__logo{
-        
         position: absolute;
-        top: 44px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50% );
         img{
             width: 132px;
-        height: 77px;
+            height: 77px;
         }
     }
     .top__title{
@@ -530,6 +560,7 @@
 }
 .project-descr{
     background-color: #202020;
+    overflow-y: scroll;
     &__inner{
         padding-top: 150px;
     }
@@ -562,9 +593,10 @@
     }
     &__slider-item{
         max-width: 1140px;
+        height: 564px;
         img{
-            max-height: 564px;
             width: 100%;
+            height: 100%;
         }
     }
     .slider__btn{
@@ -600,7 +632,6 @@
             z-index: 1;
         }
         &.slider__btn-right {
-            top: 221px;
             right: 0px;
         }
     }
@@ -640,14 +671,13 @@
         background-color: #202020;
     }
     .top__logo{
-        
         position: absolute;
-        top: 44px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50% );
         img{
             width: 132px;
-        height: 77px;
+            height: 77px;
         }
     }
     .top__wrapper{
@@ -668,7 +698,10 @@
     }
     .portfolio__btn{
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 200px;
     }
 }
 // end portfolio-page
+
+
+@import "media";

@@ -34,6 +34,7 @@ body{
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
+    background-color: #222222;
 }
 .container{
     max-width: 1170px;
@@ -50,6 +51,11 @@ body{
     width: 22px;
     height: 22px;
     display: inline-block;
+    transition: all ease-out 0.3s;
+    &:hover{
+        transition: all ease-out 0.3s;
+        transform: scale(1.2);
+    }
     svg{
         fill: #fff;
     }
@@ -69,13 +75,16 @@ body{
         display: flex;
         align-items: center;
         height: 93px;
-        letter-spacing: 4px;
+        font-family: 'Futura PT Bold';
+        letter-spacing: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
         span{
-            font-family: 'Futura PT Bold';
-            letter-spacing: 6px;
-            margin-left: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-family: 'Futura PT Normal';
+            font-weight: 400;
+            text-transform: initial;
+            margin-right: 10px;
         }
     }
 }
@@ -84,14 +93,15 @@ body{
     color: #C9C9C9;
     font-family: 'Futura PT Light';
     top: 50%;
-    // top: calc(50% + 50px);+
-
     transform: translateY(-50%);
     width: 140px;
     right: 137px;
+    transition: all 1s;
     .menu__list-item{
         transition: all 0.3s;
         position: relative;
+        font-size: 24px;
+        line-height: 31px;
         &::before{
             content: '';
             position: absolute;
@@ -123,8 +133,19 @@ body{
                 transition: all 0.3s;
             }
         }
+    
+        
     }
 }
 .fp-tableCell{
     display: block;
 }
+.fp-viewing-news,
+.fp-viewing-footer{
+    .menu{
+        right: 50px;
+        transition: all 1s;
+    }
+}
+
+
